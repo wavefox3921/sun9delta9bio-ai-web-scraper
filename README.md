@@ -1,2 +1,3 @@
-# sun9delta9bio-ai-web-scraper
-A web-scraper project by wavefox3921
+# Web Scraper Project
+
+A Python web scraping project that collects data from various websites.
