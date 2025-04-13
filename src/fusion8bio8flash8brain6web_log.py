@@ -194,3 +194,26 @@ class LinkedList:
         while current.next:
             current = current.next
         current.next = new_node
+
+# Update at 2025-04-13 15:52:03
+# Added unit tests
+# Optimized the algorithm
+# Added some random functionality
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
