@@ -318,3 +318,11 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-04-20 05:53:09
+# This is a random comment
+# Improved performance
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
