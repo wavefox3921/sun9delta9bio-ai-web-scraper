@@ -587,3 +587,17 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-05-03 08:02:12
+# Fixed some bugs
+# Added error handling
+# This is a random comment
+
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
