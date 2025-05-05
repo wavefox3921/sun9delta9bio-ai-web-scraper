@@ -613,3 +613,19 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-05-05 09:02:03
+# Updated the code with new features
+# Added unit tests
+
+
+from PIL import Image
+
+def resize_image(image_path, size):
+    with Image.open(image_path) as img:
+        resized = img.resize(size)
+        return resized
+
+def convert_to_grayscale(image_path):
+    with Image.open(image_path) as img:
+        return img.convert('L')
