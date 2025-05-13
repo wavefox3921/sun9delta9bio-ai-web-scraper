@@ -761,3 +761,32 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-05-14 01:28:07
+# Added some random functionality
+# Added error handling
+# Refactored the code
+
+import sqlite3
+
+def create_connection(db_file):
+    try:
+        conn = sqlite3.connect(db_file)
+        return conn
+    except sqlite3.Error as e:
+        print(e)
+        return None
+
+def create_table(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                email TEXT UNIQUE
+            )
+        ''')
+        conn.commit()
+    except sqlite3.Error as e:
+        print(e)
