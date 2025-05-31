@@ -1052,3 +1052,14 @@ def validate_email(email):
 def extract_phone_numbers(text):
     pattern = r'\d{3}-\d{3}-\d{4}'
     return re.findall(pattern, text)
+
+# Update at 2025-05-31 19:38:08
+# Refactored the code
+# Added error handling
+# This is a random comment
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
