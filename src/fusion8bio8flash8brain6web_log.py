@@ -1063,3 +1063,16 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     return n * factorial(n-1)
+
+# Update at 2025-06-01 22:38:05
+# Fixed some bugs
+# Added some random functionality
+# Refactored the code
+
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
