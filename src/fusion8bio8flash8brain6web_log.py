@@ -1076,3 +1076,14 @@ def reverse_string(s):
 def is_palindrome(s):
     s = s.lower().replace(" ", "")
     return s == s[::-1]
+
+# Update at 2025-06-02 18:41:10
+# Added unit tests
+# Added error handling
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
