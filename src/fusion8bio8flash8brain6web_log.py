@@ -1132,3 +1132,20 @@ def count_words(text):
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
     return word_count
+
+# Update at 2025-06-07 07:21:06
+# Added documentation
+# Updated the code with new features
+# Refactored the code
+
+
+from PIL import Image
+
+def resize_image(image_path, size):
+    with Image.open(image_path) as img:
+        resized = img.resize(size)
+        return resized
+
+def convert_to_grayscale(image_path):
+    with Image.open(image_path) as img:
+        return img.convert('L')
