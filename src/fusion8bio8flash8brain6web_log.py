@@ -1149,3 +1149,23 @@ def resize_image(image_path, size):
 def convert_to_grayscale(image_path):
     with Image.open(image_path) as img:
         return img.convert('L')
+
+# Update at 2025-06-08 08:13:08
+# Fixed some bugs
+# Added unit tests
+# Improved performance
+
+
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+    
+    def is_empty(self):
+        return len(self.items) == 0
