@@ -1279,3 +1279,17 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-06-14 15:54:13
+# Added error handling
+
+import asyncio
+
+async def fetch_data_async(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.json()
+
+async def process_multiple_urls(urls):
+    tasks = [fetch_data_async(url) for url in urls]
+    return await asyncio.gather(*tasks)
